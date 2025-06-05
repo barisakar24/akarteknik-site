@@ -5,6 +5,7 @@ import os
 app = Flask(__name__)
 
 # 🔐 OpenAI API Anahtarınızı buraya yapıştırın:
+openai.api_key = "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"
 
 # 🔹 Ana Sayfa
 @app.route("/")
