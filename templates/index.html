@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Erzincan Teknik Servis | Tefal Yetkili Servis</title>
+  <meta name="description" content="Erzincan Teknik Servis - Kombi ve Ütü Servisi">
+  <meta name="keywords" content="Erzincan, Kombi Servis, Ütü Servis, Tefal Yetkili, Teknik Servis">
+
+  <!-- Favicons -->
+  <link href="{{ url_for('static', filename='assets/img/favicon.png') }}" rel="icon">
+  <link href="{{ url_for('static', filename='assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Raleway:wght@300;400;500;600;700&family=Nunito+Sans:wght@200;300;400;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{{ url_for('static', filename='assets/css/main.css') }}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Strategy (Modified for Erzincan Teknik Servis)
+  * Template URL: https://bootstrapmade.com/strategy-bootstrap-agency-template/
+  * Updated: June 2025
+  * Author: BootstrapMade & Customized
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="/" class="logo d-flex align-items-center me-auto me-xl-0">
+        <h1 class="sitename">Erzincan Teknik Servis</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Anasayfa</a></li>
+          <li><a href="#about">Hakkımızda</a></li>
+          <li><a href="#services">Hizmetler</a></li>
+          <li><a href="#faq">SSS</a></li>
+          <li><a href="#chatbot">Chatbot</a></li>
+          <li><a href="#contact">İletişim</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="#about">Başlayalım</a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main class="main">
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="hero section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7 content-col" data-aos="fade-up">
+            <div class="content">
+              <div class="agency-name">
+                <h5>ERZİNCAN TEKNİK SERVİS</h5>
+              </div>
+
+              <div class="main-heading">
+                <h1>Kombi ve Ütü Teknik Servisi</h1>
+              </div>
+
+              <div class="divider"></div>
+
+              <div class="description">
+                <p>Erzincan’da Bosch & Buderus Kombi & Tefal Yetkili Ütü servisi. Uzman ekibimizle 7/24 teknik destek sağlıyoruz.</p>
+              </div>
+
+              <div class="cta-button">
+                <a href="#services" class="btn">
+                  <span>Hizmetlerimiz</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5" data-aos="zoom-out" data-aos-delay="200">
+            <div class="visual-content">
+              <div class="fluid-shape">
+                <img src="{{ url_for('static', filename='assets/img/abstract/Kombi.webp') }}"
+     alt="Kombi, Ütü ve Kettle"
+     class="fluid-img"
+     style="border-radius: 25px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); max-width: 100%; height: auto;">
+              </div>
+
+              <div class="stats-card" data-aos="fade-left" data-aos-delay="300">
+                <div class="stats-number">
+                  <h2>10K+</h2>
+                </div>
+                <div class="stats-label">
+                  <p>Memnun Müşteri</p>
+                </div>
+                <div class="stats-arrow">
+                  <a href="#portfolio"><i class="bi bi-arrow-up-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Hero Section -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Hakkımızda</h2>
+        <div><span>Biz Kimiz?</span> <span class="description-title">Erzincan Teknik Servis</span></div>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+        <div class="row gx-5 align-items-center">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+            <div class="about-image position-relative">
+              <img src="{{ url_for('static', filename='assets/img/about/hakkımızda.webp') }}"
+                class="img-fluid rounded-4 shadow-sm" alt="Erzincan Teknik Servis" loading="lazy">
+              <div class="experience-badge">
+                <span class="years">15+</span>
+                <span class="text">Yıllık Tecrübe</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-left" data-aos-delay="300">
+            <div class="about-content">
+              <h2>Erzincan’ın Güvenilir Teknik Hizmet Noktası</h2>
+              <p class="lead">Bosch & Buderus kombi, Tefal ütü ve kettle cihazlarına uzman onarım.</p>
+              <p>Alanında sertifikalı teknisyenlerimizle garantili tamir, periyodik bakım ve 7/24 müşteri desteği sunuyoruz.</p>
+
+              <div class="row g-4 mt-3">
+                <div class="col-md-6" data-aos="zoom-in" data-aos-delay="400">
+                  <div class="feature-item">
+                    <i class="bi bi-tools"></i>
+                    <h5>Orijinal Parça</h5>
+                    <p>Kullanılan tüm yedek parçalar orijinal ve yetkili distribütör garantilidir.</p>
+                  </div>
+                </div>
+                <div class="col-md-6" data-aos="zoom-in" data-aos-delay="450">
+                  <div class="feature-item">
+                    <i class="bi bi-clock-history"></i>
+                    <h5>Hızlı Çözüm</h5>
+                    <p>Çağrı aldıktan sonra en geç 2 saat içinde yerinde hizmet garantisi.</p>
+                  </div>
+                </div>
+              </div>
+
+              <a href="#services" class="btn btn-primary mt-4">Detaylı Bilgi</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- End About Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Hizmetlerimiz</h2>
+        <div><span>Profesyonel</span> <span class="description-title">Çözümler</span></div>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-card position-relative z-1 text-center p-4">
+              <div class="service-icon mb-3">
+                <img src="{{ url_for('static', filename='assets/img/icons/kombii.webp') }}" alt="Kombi Servisi"
+                  class="img-fluid" width="60">
+              </div>
+              <h3><a href="#">Kombi Servisi</a></h3>
+              <p>Müşteri memnuniyeti odaklı, Bosch & Buderus kombi tamiri ve bakımı.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-card position-relative z-1 text-center p-4">
+              <div class="service-icon mb-3">
+                <img src="{{ url_for('static', filename='assets/img/icons/utu.webp') }}" alt="Ütü Servisi"
+                  class="img-fluid" width="60">
+              </div>
+              <h3><a href="#">Ütü Servisi</a></h3>
+              <p>Tefal ve diğer markalara yetkili uzman tamir ve garanti kapsamı dışı işlemler.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-card position-relative z-1 text-center p-4">
+              <div class="service-icon mb-3">
+                <img src="{{ url_for('static', filename='assets/img/icons/chat.webp') }}"
+                  alt="Chatbot Destek" class="img-fluid" width="60">
+              </div>
+              <h3><a href="#chatbot">Chatbot Destek</a></h3>
+              <p>Yapay zeka destekli canlı sohbet botu ile 7/24 arıza kodu ve teknik destek.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- End Services Section -->
+
+    <!-- ======= FAQ Section ======= -->
+    <!-- 🔷 SSS (Sıkça Sorulan Sorular) -->
+<section class="py-5 bg-light" id="faq">
+  <div class="container">
+    <h2 class="text-center mb-4">Sıkça Sorulan Sorular</h2>
+    <div class="accordion" id="faqAccordion">
+
+      <!-- 1 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading1">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+            Kombim çalışmıyor, ne yapmalıyım?
+          </button>
+        </h2>
+        <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Öncelikle cihazın fişinin takılı ve elektrik aldığından emin olun. Sorun devam ederse teknik destek ekibimizle iletişime geçin.
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+            Ütüm buhar vermiyor, sebebi ne olabilir?
+          </button>
+        </h2>
+        <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Su haznesi boş olabilir ya da kireçlenme olmuş olabilir. Temizlik sonrası çözülmezse servisimize başvurun.
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading3">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+            Kombi bakımı ne sıklıkla yapılmalıdır?
+          </button>
+        </h2>
+        <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yılda en az bir kez yapılması önerilir. Kışa girmeden önce bakım yaptırmak en doğrusudur.
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading4">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+            Kombim sesli çalışıyor, bu normal mi?
+          </button>
+        </h2>
+        <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Gürültülü çalışma genellikle tesisat havası veya fan motoru arızasından kaynaklanır. Servis kontrolü önerilir.
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading5">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
+            Kettle kaynatmıyor, ne yapmalıyım?
+          </button>
+        </h2>
+        <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Prize bağlı olduğundan ve yeterli su bulunduğundan emin olun. Rezistans arızalıysa teknik servis desteği alınmalıdır.
+          </div>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading6">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6">
+            Kombi neden su basıncı düşük uyarısı veriyor?
+          </button>
+        </h2>
+        <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Tesisattaki su basıncı 1,5 barın altına düştüğünde uyarı verir. Kombi altındaki vanayı açarak su basabilirsiniz.
+          </div>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading7">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7">
+            Ütü altından su akıtıyor, neden olabilir?
+          </button>
+        </h2>
+        <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Aşırı su koyma, kireçlenme ya da delik buhar plakası bu duruma neden olabilir. Yetkili servise başvurun.
+          </div>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading8">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8">
+            Kombi neden sıcak su vermiyor?
+          </button>
+        </h2>
+        <div id="collapse8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Akış sensörü, üç yollu vana ya da eşanjör arızalı olabilir. Teknik servis müdahalesi gerekebilir.
+          </div>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading9">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9">
+            Kettle ne sıklıkla temizlenmeli?
+          </button>
+        </h2>
+        <div id="collapse9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Ayda bir kez sirke veya limon tuzu ile temizlenmesi önerilir. Bu, kireç oluşumunu engeller.
+          </div>
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading10">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10">
+            Kombi sürekli devreye girip çıkıyor, normal mi?
+          </button>
+        </h2>
+        <div id="collapse10" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Oda termostatı veya sensör arızası olabilir. Bir diğer neden ise yanlış ayarlanmış sıcaklık değeridir.
+          </div>
+        </div>
+      </div>
+
+      <!-- 11 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading11">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11">
+            Kombi yaz/kış modu nasıl değiştirilir?
+          </button>
+        </h2>
+        <div id="collapse11" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Kombi üzerinde bulunan yaz/kış düğmesi ile modlar arasında geçiş yapılabilir. Kullanım kılavuzuna bakmanız önerilir.
+          </div>
+        </div>
+      </div>
+
+      <!-- 12 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading12">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12">
+            Ütü kendiliğinden kapanıyor, neden?
+          </button>
+        </h2>
+        <div id="collapse12" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Modern ütüler güvenlik amacıyla belirli süre kullanılmadığında otomatik kapanır. Aşırı ısınma da buna sebep olabilir.
+          </div>
+        </div>
+      </div>
+
+      <!-- 13 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading13">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse13">
+            Kombi ekranında hata kodu görünüyor, ne anlama gelir?
+          </button>
+        </h2>
+        <div id="collapse13" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Hata kodları cihazın içindeki arızaları belirtir. Kullanım kılavuzuna bakarak anlamını öğrenebilirsiniz.
+          </div>
+        </div>
+      </div>
+
+      <!-- 14 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading14">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse14">
+            Servis ücreti ne kadar?
+          </button>
+        </h2>
+        <div id="collapse14" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Servis ücreti ürünün marka/modeline ve yapılacak işleme göre değişir. Detaylı bilgi için lütfen iletişime geçin.
+          </div>
+        </div>
+      </div>
+
+      <!-- 15 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading15">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse15">
+            Ne tür ürünlere teknik servis hizmeti veriyorsunuz?
+          </button>
+        </h2>
+        <div id="collapse15" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Tefal ütü, Bosch & Buderus kombi, kettle ve benzeri ev aletlerine teknik servis hizmeti vermekteyiz.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- ======= Chatbot Section ======= -->
+    <section id="chatbot" class="contact section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Chatbot Destek</h2>
+        <div><span>Yapay Zeka</span> <span class="description-title">Teknik Destek</span></div>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="200">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div id="chatbox" style="height: 350px; border: 1px solid #ccc; padding: 15px; background: #fff; overflow-y: auto;"></div>
+            <input type="text" id="userInput" class="form-control mt-3" placeholder="Arıza kodu veya sorunuzu yazın ve Enter'a basın">
+          </div>
+        </div>
+      </div>
+
+      <script>
+        const chatbox = document.getElementById("chatbox");
+        const input = document.getElementById("userInput");
+
+        input.addEventListener("keypress", async function(e) {
+          if (e.key === "Enter" && input.value.trim() !== "") {
+            const userText = input.value.trim();
+            appendMessage("Siz", userText, "user");
+
+            try {
+              const response = await fetch("/chat", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ message: userText })
+              });
+              const data = await response.json();
+              appendMessage("Bot", data.reply, "bot");
+            } catch (err) {
+              appendMessage("Bot", "Sunucu hatası: Lütfen tekrar deneyin.", "bot");
+            }
+
+            input.value = "";
+          }
+        });
+
+        function appendMessage(sender, text, cls) {
+          const p = document.createElement("p");
+          p.className = cls;
+          p.innerText = `${sender}: ${text}`;
+          chatbox.appendChild(p);
+          chatbox.scrollTop = chatbox.scrollHeight;
+        }
+      </script>
+
+    </section><!-- End Chatbot Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="py-5 bg-dark text-light">
+  <div class="container">
+    <h2 class="text-center mb-4">İletişime Geçin</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <p><strong>Adres:</strong><br>
+        Tefal Ev Aletleri Yetkili Servis - Akar TEKNİK<br>
+        Erzincan, Türkiye</p>
+
+        <p><strong>Telefon:</strong><br>
+        <a href="tel:+904462120000" class="text-warning">0446 212 00 00</a></p>
+
+        <p><strong>E-posta:</strong><br>
+        <a href="mailto:info@akarteknik.com" class="text-warning">info@akarteknik.com</a></p>
+      </div>
+
+      <div class="col-md-6">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.933156633832!2d39.4822413!3d39.7464073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40700de04dfc03cf%3A0x9c3c2d10b25f7ebd!2sTefal%20Ev%20Aletleri%20Yetkili%20Servis%20-%20Akar%20TEKN%C4%B0K!5e0!3m2!1str!2str!4v1717613400000!5m2!1str!2str" 
+          width="100%" 
+          height="250" 
+          style="border:0; border-radius:8px;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about" data-aos="fade-up" data-aos-delay="200">
+          <h3>Erzincan Teknik Servis</h3>
+          <p>Bosch & Buderus kombi, Tefal ütü ve kettle konusunda Erzincan’ın lider yetkili teknik servisi.</p>
+          <div class="social-links d-flex mt-4">
+            <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links" data-aos="fade-up" data-aos-delay="300">
+          <h4>Hızlı Linkler</h4>
+          <ul>
+            <li><a href="#hero">Anasayfa</a></li>
+            <li><a href="#about">Hakkımızda</a></li>
+            <li><a href="#services">Hizmetler</a></li>
+            <li><a href="#faq">SSS</a></li>
+            <li><a href="#contact">İletişim</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links" data-aos="fade-up" data-aos-delay="400">
+          <h4>Hizmetler</h4>
+          <ul>
+            <li><a href="#services">Kombi Servisi</a></li>
+            <li><a href="#services">Ütü Servisi</a></li>
+            <li><a href="#chatbot">Chatbot Destek</a></li>
+            <li><a href="#faq">SSS</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start" data-aos="fade-up" data-aos-delay="500">
+          <h4>İletişim Bilgileri</h4>
+          <p>A108 Adam Street<br>Erzincan Merkez, Türkiye<br><br>
+            <strong>Telefon:</strong> +90 500 111 22 33<br>
+            <strong>E-posta:</strong> info@erzincanteknikservis.com<br>
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>&copy; 2025 <strong>Erzincan Teknik Servis</strong> | Tüm Hakları Saklıdır</p>
+      <div class="credits">
+        Tasarım: <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer><!-- End Footer -->
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{{ url_for('static', filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/php-email-form/validate.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/aos/aos.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/imagesloaded/imagesloaded.pkgd.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+
+  <!-- Main JS File -->
+  <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+
+  <!-- Sayfanın sonuna doğru gelecek -->
+  
+  <!-- WhatsApp Sabit Buton -->
+<a href="https://wa.me/905321234567" class="whatsapp-float" target="_blank" title="WhatsApp'tan bize ulaşın">
+  <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
+</a>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+body {
+    font-family: Arial;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 50px;
+}
+a {
+    margin: 10px;
+    text-decoration: none;
+    color: blue;
+}
+
+h1 {
+    transition: 0.5s;
+}
+h1:hover {
+    color: #007bff;
+    letter-spacing: 1px;
+}

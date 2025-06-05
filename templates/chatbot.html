@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Erzincan Teknik Servis | Chatbot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- 1) Bootstrap 5 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-VOtFoV9O1APv+8vnBbvawgGdYHvR30X/7xkaF9XZCtKDQFJgoMSfB0roZEfJ3IKa"
+    crossorigin="anonymous"
+  >
+
+  <!-- 2) Ana CSS dosyanız (Flask ile: static/assets/css/main.css) -->
+  <link href="{{ url_for('static', filename='assets/css/main.css') }}" rel="stylesheet">
+
+  <!-- 3) Chatbox’a özel inline CSS -->
+  <style>
+    body {
+      background-color: #031119;
+      color: #e0e9f2;
+      font-family: "Roboto", system-ui, sans-serif;
+    }
+    #chatbox {
+      height: 400px;
+      border: 1px solid #444;
+      padding: 15px;
+      overflow-y: auto;
+      background-color: #0f1a1e !important;
+      border-radius: 10px;
+      color: #f1f1f1 !important;
+    }
+    #chatbox p {
+      margin: 8px 0;
+      line-height: 1.4;
+    }
+    #chatbox p.user {
+      color: #4fc3f7 !important;
+      font-weight: 600;
+    }
+    #chatbox p.bot {
+      color: #c3e88d !important;
+      font-weight: 600;
+    }
+    #userInput {
+      width: 100%;
+      margin-top: 15px;
+      padding: 12px 15px;
+      font-size: 16px;
+      border: 1px solid #555;
+      border-radius: 10px;
+      background-color: #1c2a30;
+      color: #f1f1f1;
+    }
+    #userInput::placeholder {
+      color: #999;
+    }
+    #userInput:focus {
+      outline: none;
+      border-color: #e3a127;
+      box-shadow: 0 0 5px rgba(227, 161, 39, 0.6);
+      background-color: #1c2a30;
+    }
+    #chatbox::-webkit-scrollbar {
+      width: 8px;
+    }
+    #chatbox::-webkit-scrollbar-thumb {
+      background-color: rgba(227,161,39,0.6);
+      border-radius: 4px;
+    }
+    #chatbox::-webkit-scrollbar-track {
+      background-color: #0f1a1e;
+    }
+    .chatbot-wrapper {
+      max-width: 700px;
+      margin: 80px auto;
+      padding: 20px;
+      background-color: #0d1d26;
+      border-radius: 8px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    }
+    .chatbot-wrapper h2 {
+      color: #ffffff;
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="chatbot-wrapper">
+    <h2>Yapay Zeka Destekli Chatbot</h2>
+    <div id="chatbox"></div>
+    <input
+      type="text"
+      id="userInput"
+      class="form-control"
+      placeholder="Arıza kodu veya sorunuzu yazın ve Enter'a basın"
+      autocomplete="off"
+    >
+  </div>
+
+  <!-- Bootstrap JS (isteğe bağlı) -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76A/VSDfbFOeRDGp5H+BFrDmM1NXueA+d9L+6y2G/2e6U3wwjcw2JXPdC/U8lE8"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- Chatbot JavaScript -->
+  <script>
+    const chatbox = document.getElementById("chatbox");
+    const input = document.getElementById("userInput");
+
+    input.addEventListener("keypress", async function(e) {
+      if (e.key === "Enter" && input.value.trim() !== "") {
+        const userText = input.value.trim();
+        appendMessage("Siz", userText, "user");
+        input.value = "";
+
+        // “Düşünüyorum... 🤔” yaz
+        const thinkingMessage = appendMessage("Bot", "Düşünüyorum... 🤔", "bot");
+
+        try {
+          const response = await fetch("/chat", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ message: userText })
+          });
+
+          if (!response.ok) throw new Error("Sunucu hatası: " + response.status);
+          const data = await response.json();
+
+          // Geçici mesajı sil, gerçek cevabı göster
+          chatbox.removeChild(thinkingMessage);
+          appendMessage("Bot", data.reply || "Cevap alınamadı.", "bot");
+        } catch (err) {
+          console.error(err);
+          chatbox.removeChild(thinkingMessage);
+          appendMessage("Bot", "Sunucu hatası: Lütfen tekrar deneyin.", "bot");
+        }
+      }
+    });
+
+    function appendMessage(sender, text, cls) {
+      const p = document.createElement("p");
+      p.className = cls;
+      p.innerHTML = `<strong>${sender}:</strong> ${text}`;
+      chatbox.appendChild(p);
+      chatbox.scrollTop = chatbox.scrollHeight;
+      return p;
+    }
+  </script>
+</body>
+</html>
